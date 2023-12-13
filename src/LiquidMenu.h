@@ -736,13 +736,16 @@ public:
   LiquidMenu *get_next_menu();
   void set_next_screen(LiquidScreen *next);
   LiquidScreen *get_next_screen();
-
+  void set_function_pointer(void (*function)(void));
+  void call_function2();
+  
 private:
   LiquidMenu *nextMenu = NULL;
   LiquidScreen *nextScreen = NULL;
   LiquidMenu *prevMenu = NULL;
   LiquidScreen *prevScreen = NULL;
   bool specialCase = false;
+  void (*funPtr)(void) = NULL;
 
   /// Prints the lines pointed by the screen.
   /**

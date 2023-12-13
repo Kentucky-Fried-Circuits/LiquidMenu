@@ -330,3 +330,14 @@ LiquidScreen *LiquidScreen::get_next_screen()
 {
 	return nextScreen;
 }
+
+void LiquidScreen::set_function_pointer(void (*function)(void))
+{
+	funPtr = function;
+}
+
+void LiquidScreen::call_function2()
+{
+	if (funPtr != NULL)
+		funPtr();
+}
