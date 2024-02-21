@@ -738,7 +738,7 @@ public:
   LiquidScreen *get_next_screen();
   void set_function_pointer(void (*function)(void));
   void call_function2();
-  
+
 private:
   LiquidMenu *nextMenu = NULL;
   LiquidScreen *nextScreen = NULL;
@@ -1353,5 +1353,5 @@ public:
 private:
   LiquidMenu *_p_liquidMenu[MAX_MENUS]; ///< The LiquidMenu objects
   uint8_t _menuCount;                   ///< Count of the LiquidMenu objects
-  uint8_t _currentMenu;                 // FIXME should be private
+  uint8_t _currentMenu;
 };
